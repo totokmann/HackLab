@@ -1,0 +1,178 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #4a4a4a;
+    color: #c4ff4a;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex: 1;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #3a3a3a;
+    color: #c4ff4a;
+}
+
+.navbar-user button {
+    background-color: #555;
+    border: none;
+    color: #c4ff4a;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.navbar-search input {
+    padding: 8px;
+    width: 200px;
+    border-radius: 4px;
+    background-color: #ccc;
+    color: #333;
+}
+
+.toggle-sidebar {
+    display: none;
+    background-color: #555;
+    border: none;
+    color: #c4ff4a;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 15%;
+    padding: 20px;
+    background-color: #333;
+    color: #c4ff4a;
+    flex-shrink: 0;
+}
+
+.sidebar.active {
+    display: none;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 8px 0;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+.sidebar ul li a {
+    color: #c4ff4a;
+    text-decoration: none;
+}
+
+/* Notas (Área de la consola) */
+.notes {
+    background-color: #000000;
+    padding: 20px;
+    width: 100%;
+    flex-grow: 1; /* Esto permite que la consola ocupe todo el espacio disponible */
+    display: flex;
+    flex-direction: column; /* Alineación de la consola de arriba a abajo */
+    overflow-y: auto; /* Añadir scroll si es necesario */
+}
+
+/* Ajustes para la salida y la entrada de la terminal */
+.console-output {
+    flex-grow: 1; /* Permite que la salida ocupe todo el espacio posible */
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.console-input {
+    display: flex;
+    align-items: center;
+}
+
+#console-input {
+    background-color: #000000;
+    color: #c5c8c6;
+    border: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-family: 'Courier New', monospace;
+}
+
+.command {
+    color: #c5c8c6;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 5px;
+}
+
+/* Ajustes en el footer para que siempre esté al final */
+.footer {
+    background-color: #1d1f21;
+    color: #c5c8c6;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer a {
+    color: #c4ff4a;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 1024px) {
+    .navbar-search input {
+        width: 200px;
+    }
+
+    .toggle-sidebar {
+        display: inline-block;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .sidebar.active {
+        display: block;
+        position: absolute;
+        z-index: 10;
+        background-color: #333;
+        width: 200px;
+        top: 60px;
+        height: 100%;
+    }
+}

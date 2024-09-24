@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackLab</title>
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-user">
+            <button>User</button>
+        </div>
+        <div class="navbar-search">
+            <input type="text" placeholder="Buscar...">
+        </div>
+        <button id="toggle-sidebar" class="toggle-sidebar">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+    <div class="container">
+        <aside id="sidebar" class="sidebar">
+            <div class="levels">
+                <h2>Levels</h2>
+                <ul>
+                    <li>Trainee</li>
+                    <li>Junior</li>
+                    <li>SemiSenior</li>
+                    <li>Senior</li>
+                </ul>
+            </div>
+            <div class="options">
+                <h2>Advance</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listado_tabla.html">All Products Table</a></li>
+                    <li><a href="listado_box.html">All Products Box</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                </ul>
+            </div>
+        </aside>        
+
+        <main class="main-content">
+            <div class="info-box">
+                <h2>SQL Injection</h2>
+                <p>Dificultad: Facil</p>
+                <p>Una vulnerabilidad de SQL Injection (Inyección de SQL) ocurre cuando una aplicación web permite que un atacante interfiera con las consultas SQL que realiza la aplicación a su base de datos. Esto sucede cuando los datos de entrada del usuario no se validan o escapan correctamente, lo que permite al atacante manipular las consultas SQL originales. <br>
+
+                    <ul>
+                        <b>Tipos comunes de SQL Injection:</b>
+                         <li>Basada en consultas: El atacante modifica una consulta SQL existente. Por ejemplo, alterando una consulta de autenticación para siempre devolver un resultado positivo.</li>
+                     
+                         <li>Basada en union: El atacante utiliza la cláusula UNION para combinar resultados de varias consultas, obteniendo acceso a datos que normalmente no serían visibles.</li>
+                     
+                         <li>Basada en ciegas: Ocurre cuando el servidor no muestra los resultados de la consulta al atacante. El atacante realiza consultas SQL que modifican el comportamiento del servidor, permitiendo inferir información de la base de datos indirectamente.</li>
+                        <br>
+                    </ul>
+                    <ul>
+                        <b>Consecuencias</b>
+                         <li>Acceso no autorizado a datos sensibles (nombres de usuario, contraseñas, información personal).</li>
+                     
+                         <li>Modificación o eliminación de datos en la base de datos.</li>
+                     
+                         <li>Compromiso total del servidor, dependiendo de los permisos de la cuenta de la base de datos utilizada por la aplicación.</li>
+                        <br>
+                    </ul>  
+                <a href="SQL_Injection.html">Probar Ahora</a>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 HackLab.</p>
+            <p>Contact: <a href="mailto:info@yourcompany.com">tomasezequielkugelmann@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('toggle-sidebar').addEventListener('click', function() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

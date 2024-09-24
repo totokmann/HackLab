@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #4a4a4a;
+    color: #c4ff4a;
+    max-width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #3a3a3a;
+    color: #c4ff4a;
+}
+
+.navbar-user button {
+    background-color: #555;
+    border: none;
+    color: #c4ff4a;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.navbar-search input {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #ccc;
+    color: #333;
+}
+
+.toggle-sidebar {
+    display: none;
+    background-color: #555;
+    border: none;
+    color: #c4ff4a;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 15%;
+    padding: 20px;
+    background-color: #333;
+    color: #c4ff4a;
+    flex-shrink: 0;
+}
+
+.sidebar.active {
+    display: none;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 8px 0;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+.sidebar ul li a {
+    color: #c4ff4a;
+    text-decoration: none;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #555;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: nowrap; /* Evitar que las cajas se envuelvan hasta que se active la media query */
+    width: 100%;
+}
+
+.info-box {
+    background-color: #6c6c6c;
+    border-radius: 4px;
+    color: #c4ff4a;
+    margin-bottom: 20px;
+    width: 48%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #444;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    background-color: #99cc66;
+    height: 20px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 4px;
+    background-color: #444;
+    color: #c4ff4a;
+}
+
+.recent-machines {
+    background-color: #6c6c6c;
+    padding: 20px;
+    border-radius: 4px;
+    flex-grow: 1; 
+}
+
+.machine {
+    display: flex;
+    align-items: center;
+    background-color: #99cc66;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Play Button Styles */
+.play-button {
+    background-color: #3a3a3a;
+    border: none;
+    color: #c4ff4a;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 70px;
+    height: 100%;
+    text-align: center; 
+}
+
+.play-button i {
+    line-height: 1;
+}
+
+.play-button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+.footer {
+    background-color: #3a3a3a;
+    color: #c4ff4a;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Media Queries */
+
+/* PC (desktops) */
+@media (min-width: 1024px) {
+    .navbar-search input {
+        width: 250px;
+    }   
+
+    .toggle-sidebar {
+        display: none; /* Oculta el botón en pantallas grandes */
+    }
+
+    .sidebar {
+        display: block; /* Muestra el sidebar por defecto en pantallas grandes */
+    }
+
+    .sidebar.active {
+        display: block; /* Asegura que el sidebar esté visible cuando está activo */
+    }
+}
+
+/* Tablet (landscape and portrait) */
+@media (max-width: 1024px) {
+    .navbar-search input {
+        width: 200px;
+    }
+
+    .toggle-sidebar {
+        display: inline-block; /* Muestra el botón de alternancia en tablets */
+    }
+
+    .sidebar {
+        display: none; /* Asegura que el sidebar esté oculto por defecto en tablets */
+    }
+
+    .sidebar.active {
+        display: block;
+        position: absolute;
+        z-index: 10;
+        background-color: #333;
+        width: 200px;
+        top: 60px;
+        height: 100%;
+    }
+    .info-boxes {
+        flex-direction: column;
+        flex-wrap: wrap; /* Permitir que las cajas se envuelvan en pantallas más pequeñas */
+        max-width: 100%;
+    }
+
+    .info-box {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box; /* Asegura que el padding no desborde la caja */
+    }
+}
+

@@ -1,0 +1,79 @@
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #2e2e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Login container styling */
+.login-container {
+    background-color: #3d3d3d;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    border: 2px solid #99cc66;
+    position: relative;
+}
+
+/* Header styling */
+.login-form h2 {
+    text-align: center;
+    color: #99cc66;
+    margin-bottom: 30px;
+}
+
+/* Form group styling */
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Label styling with icon */
+.form-group label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #99cc66;
+    font-size: 20px;
+}
+
+/* Input field styling */
+.form-group input {
+    width: calc(100% - 40px);
+    padding: 10px 10px 10px 40px;
+    border: 2px solid #99cc66;
+    border-radius: 5px;
+    background-color: #4b4b4b;
+    color: #e0e0e0;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #99cc66;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #88b65c;
+}
+/* Label styling with icon */
+.form-group label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #99cc66;
+    font-size: 20px; 
+}
+

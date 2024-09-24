@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackLab</title>
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-user">
+            <a href="login.html">
+                <button>Log Out</button>
+            </a>
+        </div>
+        <div class="navbar-search">
+            <input type="text" placeholder="Buscar...">
+        </div>
+        <button id="toggle-sidebar" class="toggle-sidebar">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <div class="levels">
+                <h2>Levels</h2>
+                <ul>
+                    <li>Trainee</li>
+                    <li>Junior</li>
+                    <li>SemiSenior</li>
+                    <li>Senior</li>
+                </ul>
+            </div>
+            <div class="options">
+                <h2>Advance</h2>
+                <ul>
+                    <li><a href="listado_tabla.html">All Products Table</a></li>
+                    <li><a href="listado_box.html">All Products Box</a></li>
+                    <li><a href="notes.html">Notes</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="info-boxes">
+                <div class="info-box">
+                    <div class="level-tag">Trainee</div>
+                    <h3>Actual Level</h3>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 45%;">45%</div>
+                    </div>
+                    <p>450/1000</p>
+                </div>
+                <div class="info-box">
+                    <h2>Fast Notes</h2>
+                    <textarea placeholder="nombre_de_usuario@nivel:~$"></textarea>               </div>
+                </div>            
+            <div class="recent-machines">
+                <h2>Recent Machines</h2>
+                <div class="machine">
+                    <div class="machine-info">
+                        <h3>XSS</h3>
+                    </div> 
+                    <a href="XSS.html" target="_blank">
+                        <button class="play-button"><i class="fa fa-play"></i></button>
+                    </a>
+                </div>
+                <div class="machine">
+                    <div class="machine-info">
+                        <h3>SQL Injection</h3>
+                    </div>
+                    <a href="SQL_Injection.html" target="_blank">
+                        <button class="play-button"><i class="fa fa-play"></i></button>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 HackLab.</p>
+            <p>Contact: <a href="mailto:info@yourcompany.com">tomasezequielkugelmann@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('toggle-sidebar').addEventListener('click', function() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        });
+    </script>
+    
+</body>
+</html>

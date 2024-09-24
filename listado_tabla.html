@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackLab</title>
+    <link rel="stylesheet" href="css/listado_tablas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-user">
+            <button>User</button>
+        </div>
+        <div class="navbar-search">
+            <input type="text" placeholder="Buscar...">
+        </div>
+        <button id="toggle-sidebar" class="toggle-sidebar">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <div class="levels">
+                <h2>Levels</h2>
+                <ul>
+                    <li>Trainee</li>
+                    <li>Junior</li>
+                    <li>SemiSenior</li>
+                    <li>Senior</li>
+                </ul>
+            </div>
+            <div class="options">
+                <h2>Advance</h2>
+                <ul>
+                    <li><a href=index.html>Home</a></li>
+                    <li><a href=listado_box.html>All Products Box</a></li>
+                    <li><a href=notes.html>Notes</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Dificultad</th>
+                        <th>Detalles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>XSS</td>
+                        <td>Fácil</td>
+                        <td><a href="XSS_product.html">Ver Producto</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>SQL Injection</td>
+                        <td>Fácil</td>
+                        <td><a href="SQL_Injection_product.html">Ver Producto</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 HackLab.</p>
+            <p>Contact: <a href="mailto:info@yourcompany.com">tomasezequielkugelmann@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('toggle-sidebar').addEventListener('click', function() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

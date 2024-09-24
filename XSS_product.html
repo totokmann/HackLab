@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackLab</title>
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-user">
+            <button>User</button>
+        </div>
+        <div class="navbar-search">
+            <input type="text" placeholder="Buscar...">
+        </div>
+        <button id="toggle-sidebar" class="toggle-sidebar">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+    <div class="container">
+        <aside id="sidebar" class="sidebar">
+            <div class="levels">
+                <h2>Levels</h2>
+                <ul>
+                    <li>Trainee</li>
+                    <li>Junior</li>
+                    <li>SemiSenior</li>
+                    <li>Senior</li>
+                </ul>
+            </div>
+            <div class="options">
+                <h2>Advance</h2>
+                <ul>
+                    <li><a href=index.html>Home</a></li>
+                    <li><a href=listado_tabla.html>All Products Table</a></li>
+                    <li><a href=listado_box.html>All Products Box</a></li>
+                    <li><a href=notes.html>Notes</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="info-box">
+                <h2>XSS</h2>
+                <p>Dificultad: Facil</p>
+                <p>Descripción: XSS (Cross-Site Scripting) es un tipo de vulnerabilidad de seguridad en aplicaciones web que permite a un atacante inyectar código malicioso, generalmente en forma de scripts JavaScript, en páginas web vistas por otros usuarios. Esto puede ocurrir cuando la aplicación web no valida o sanitiza adecuadamente los datos de entrada proporcionados por los usuarios. <br>
+
+                    <ul>
+                        <b>Hay tres tipos principales de XSS:</b>
+                         <li>Reflejada (Non-Persistent): El código malicioso se inyecta a través de una solicitud HTTP y se refleja en la respuesta del servidor sin ser almacenado. Por ejemplo, en un enlace malicioso enviado por correo electrónico.</li>
+                     
+                         <li>Almacenada (Persistent): El código malicioso se almacena en el servidor (por ejemplo, en una base de datos) y se ejecuta cada vez que un usuario accede a la página afectada.</li>
+                     
+                         <li>DOM-Based: El código malicioso se inyecta y ejecuta directamente en el navegador del usuario, manipulando el Document Object Model (DOM) de la página web.</li>
+                        <br>
+                     Las consecuencias de una vulnerabilidad XSS pueden incluir el robo de cookies de sesión, la falsificación de solicitudes, o el secuestro de cuentas de usuario.</p>
+                    </ul>
+                <a href="XSS.html">Probar Ahora</a>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 HackLab.</p>
+            <p>Contact: <a href="mailto:info@yourcompany.com">tomasezequielkugelmann@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('toggle-sidebar').addEventListener('click', function() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

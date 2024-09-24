@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSS Vulnerability Demo</title>
+    <link rel="stylesheet" href="css/xss.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Demostración de Vulnerabilidad XSS</h1>
+        <form action="" method="get">
+            <label for="comment">Introduce un comentario:</label><br>
+            <input type="text" id="comment" name="comment"><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+
+        <div class="result">
+            <h2>Comentario:</h2>
+            <p id="user-comment">
+                <!-- Aquí se mostrará el comentario del usuario -->
+                <script>
+                    var comment = new URLSearchParams(window.location.search).get('comment');
+                    if (comment) {
+                        document.write(comment);
+                    }
+                </script>
+            </p>
+            
+        </div>
+    </div>
+</body>
+</html>
