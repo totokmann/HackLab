@@ -10,12 +10,12 @@
 <body>
     <nav class="navbar">
         <div class="navbar-user">
-            <button>User</button>
+            <button id="goBackButton" onclick="goBack()">Go Back</button>
         </div>
         <div class="navbar-search">
             <input type="text" placeholder="Buscar...">
         </div>
-        <button id="toggle-sidebar" class="toggle-sidebar">
+        <button id="toggle-sidebar" class="toggle-sidebar" onclick="toggleSidebar()">
             <i class="fas fa-bars"></i>
         </button>
     </nav>
@@ -54,43 +54,6 @@
             <p>Contact: <a href="mailto:info@yourcompany.com">tomasezequielkugelmann@gmail.com</a></p>
         </div>
     </footer>
-
-    <script>
-        // Script para alternar la visibilidad del sidebar
-        document.getElementById('toggle-sidebar').addEventListener('click', function() {
-            var sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('active');
-        });
-
-        // Script para manejar la entrada de la consola
-        function handleInput(event) {
-            const input = document.getElementById('console-input');
-            const output = document.getElementById('console-output');
-
-            // Detectar la tecla "Enter"
-            if (event.key === 'Enter') {
-                event.preventDefault(); // Evitar el salto de línea
-
-                const inputText = input.value.trim();
-
-                if (inputText) {
-                    const commandElement = document.createElement('div');
-                    commandElement.classList.add('command');
-                    commandElement.textContent = `nombre_de_usuario@nivel:~$ ${inputText}`;
-
-                    output.appendChild(commandElement);  // Agregar el comando a la salida
-
-                    // Limpiar el campo de entrada
-                    input.value = '';
-
-                    // Asegurar que haga scroll hacia abajo
-                    output.scrollTop = output.scrollHeight;
-                }
-
-                // Devolver el foco al input para seguir escribiendo
-                input.focus();
-            }
-        }
-    </script>
+    <script src="main.js"></script>   
 </body>
 </html>

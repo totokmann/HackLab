@@ -15,7 +15,7 @@ body {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    width: 400px;
+    width: 350px;
     border: 2px solid #99cc66;
     position: relative;
 }
@@ -76,4 +76,3 @@ button:hover {
     color: #99cc66;
     font-size: 20px; 
 }
-

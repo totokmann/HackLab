@@ -29,11 +29,17 @@ body {
     cursor: pointer;
 }
 
+.navbar-user button:hover {
+    background-color: #333; /* Efecto hover */
+}
+
 .navbar-search input {
     padding: 8px;
-    border-radius: 4px;
-    background-color: #ccc;
-    color: #333;
+    border-radius: 16px;
+    background-color: #6c6c6c;
+    color: #c4ff4a;
+    border: 0cap;
+
 }
 
 .toggle-sidebar {
@@ -115,6 +121,20 @@ body {
 .info-box a:hover {
     background-color: #333;
 }
+
+.play_button{
+    background-color: #333;
+    color: #c4ff4a;
+    cursor: pointer;
+    border-radius: 50px; /* Ajusta el radio para hacerlo ovalado */
+    border-width: 0;
+    width: 150px; /* Ancho más grande */
+    height: 60px; /* Alto */
+    font-size: 16px; /* Ajusta el tamaño del texto */
+    text-align: center; /* Centra el texto */
+    line-height: 60px; /* Alinea verticalmente el texto */
+}
+
 
 
 /* Footer */

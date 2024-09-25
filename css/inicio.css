@@ -35,9 +35,11 @@ body {
 
 .navbar-search input {
     padding: 8px;
-    border-radius: 4px;
-    background-color: #ccc;
-    color: #333;
+    border-radius: 16px;
+    background-color: #6c6c6c;
+    color: #c4ff4a;
+    border: 0cap;
+
 }
 
 .toggle-sidebar {
@@ -113,19 +115,45 @@ body {
 
 .progress-container {
     width: 100%;
-    background-color: #444;
-    border-radius: 5px;
+    background-color: #ccc;
+    border-radius: 25px;
     overflow: hidden;
-    margin: 10px 0;
+    height: 25px;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .progress-bar {
-    background-color: #99cc66;
-    height: 20px;
-    line-height: 20px;
+    height: 100%;
+    background-color: #c4ff4a;
+    width: 0%; /* Iniciamos en 0 */
+    background-image: repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.3) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    border-radius: 25px;
+    text-align: right;
+    padding-right: 10px;
+    box-sizing: border-box;
+    line-height: 25px;
     color: #fff;
-    text-align: center;
-    white-space: nowrap;
+    font-weight: bold;
+    transition: width 0.4s ease;
+    background-size: 100%;
+    animation: move-stripes 60s linear infinite;
+}
+
+/* Animación de las líneas diagonales */
+@keyframes move-stripes {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 900px;
+    }
 }
 
 textarea {

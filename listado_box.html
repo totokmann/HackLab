@@ -10,12 +10,12 @@
 <body>
     <nav class="navbar">
         <div class="navbar-user">
-            <button>User</button>
+            <button id="goBackButton" onclick="goBack()">Go Back</button>
         </div>
         <div class="navbar-search">
             <input type="text" placeholder="Buscar...">
         </div>
-        <button id="toggle-sidebar" class="toggle-sidebar">
+        <button id="toggle-sidebar" class="toggle-sidebar" onclick="toggleSidebar()">
             <i class="fas fa-bars"></i>
         </button>
     </nav>
@@ -61,13 +61,6 @@
             <p>Contact: <a href="mailto:info@yourcompany.com">tomasezequielkugelmann@gmail.com</a></p>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('toggle-sidebar').addEventListener('click', function() {
-            var sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('active');
-        });
-    </script>
-
+    <script src="main.js"></script>
 </body>
 </html>
