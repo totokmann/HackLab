@@ -1,9 +1,7 @@
 function toggleSidebar(){
-    document.getElementById('toggle-sidebar').addEventListener('click', function() {
         var sidebar = document.getElementById('sidebar');
         sidebar.classList.toggle('active');
-    });     
-}
+};
 function handleInput(event) {
     const input = document.getElementById('console-input');
     const output = document.getElementById('console-output');
@@ -48,7 +46,5 @@ function redirectToPage(page) {
     window.location= url;
 }
 function goBack(){
-    document.getElementById("goBackButton").addEventListener("click", function() {
         window.history.back();
-    });
-}
+};
