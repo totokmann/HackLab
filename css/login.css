@@ -1,0 +1,108 @@
+/* General container styling */
+body {
+    background-color: #4a4a4a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #c4ff4a;
+}
+
+.login-container {
+    background-color: #3a3a3a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #c4ff4a;
+    border: 2px solid #99cc66;
+}
+
+/* Form styling */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form h2 {
+    color: #c4ff4a;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+/* Form group for each input and icon */
+.form-group {
+    display: flex;
+    align-items: center;
+    background-color: #6c6c6c;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #99cc66;
+}
+
+.form-group i {
+    color: #c4ff4a; /* Icon color */
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.form-group input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    flex: 1;
+    padding: 0 5px;
+}
+
+/* Placeholder styling */
+.form-group input::placeholder {
+    color: #888888;
+}
+
+/* Button styling */
+button[type="submit"] {
+    background-color: #99cc66;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #c4ff4a;
+}
+
+/* Error and success message styling */
+.error-message, .success-message {
+    color: #ff4c4c;
+    background-color: #333333;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Register link styling */
+.register-link {
+    text-align: center;
+    color: #c4ff4a;
+    margin-top: 10px;
+}
+
+.register-link a {
+    color: #99cc66;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}

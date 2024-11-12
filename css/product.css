@@ -1,0 +1,200 @@
+/* Estilo general para centrar el contenido en la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4a4a4a;
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #3a3a3a;
+    color: #c4ff4a;
+}
+
+.navbar-back button {
+    background-color: #555;
+    border: none;
+    color: #c4ff4a;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.navbar-logout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-logout button {
+    background-color: #555;
+    border: none;
+    color: #c4ff4a;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.navbar-search input {
+    padding: 8px;
+    border-radius: 16px;
+    background-color: #6c6c6c;
+    color: #c4ff4a;
+    border: none;
+}
+
+/* Estilos para la caja de información */
+.info-box {
+    background-color: #6c6c6c;
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.info-box h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.info-box p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.info-box strong {
+    font-weight: bold;
+}
+
+.play-button {
+    background-color: #4a4a4a;
+    color: #99cc66;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    align-self: flex-end;
+}
+
+.play-button:hover {
+    background-color: #333;
+}
+
+/* Estilos generales para el nuevo apartado (formulario de flag) */
+.info-box form {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.info-box form h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #c4ff4a;  /* Color de la marca */
+}
+
+/* Estilo del campo de entrada de la flag */
+.info-box input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #555;
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #444;
+    box-sizing: border-box;
+}
+
+.info-box input[type="text"]:focus {
+    outline: none;
+    border-color: #c4ff4a;
+    background-color: #333;
+}
+
+/* Estilo del botón para enviar la flag */
+.info-box button[type="submit"] {
+    background-color: #4a4a4a;
+    color: #c4ff4a;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.info-box button[type="submit"]:hover {
+    background-color: #333;
+}
+
+/* Estilo para los mensajes de validación */
+.info-box p {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.info-box p.correcto {
+    color: #5cb85c; /* Verde para mensaje de éxito */
+}
+
+.info-box p.error {
+    color: #d9534f; /* Rojo para mensaje de error */
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .info-box {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .info-box h2 {
+        font-size: 1.75em;
+    }
+
+    .info-box p {
+        font-size: 1em;
+    }
+
+    .play-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    /* Ajustes para el formulario en dispositivos móviles */
+    .info-box form {
+        padding: 15px;
+    }
+
+    .info-box input[type="text"] {
+        padding: 8px;
+        font-size: 1em;
+    }
+
+    .info-box button[type="submit"] {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+}
