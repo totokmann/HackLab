@@ -1,6 +1,11 @@
 <?php
 include 'conexion/user_info.php';
 
+if (!isset($_SESSION['user_id']) || $_SESSION['rol_id'] == '2') {
+    header("Location: index_admin.php");
+    exit();
+}
+
 $xp_total = $_SESSION['xp_total'];
 $xp_data = calcularPorcentajeXP($xp_total, $conn);
 
@@ -75,7 +80,7 @@ $levels = $result->fetch_all(MYSQLI_ASSOC);
             <div class="info-boxes">
                 <div class="info-box">
                     <div class="level-tag"><?php echo $username; ?></div>
-                    <h3><?php echo $level['nombre']; ?></h3>
+                    <h3><?php echo $user_data['nombre'];; ?></h3>
                     <div class="progress-container">
                         <div id="progress-bar" class="progress-bar" style="width: <?php echo round($porcentaje_xp); ?>%"></div>
                         <?php echo round($porcentaje_xp); ?>%

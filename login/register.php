@@ -6,7 +6,7 @@ $error_message = "";
 
 // Check if form was submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = $_POST['nombre'];
+    $name = $_POST['name'];
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $error_message = "El correo electrónico ya está registrado.";
             } else {
                 // Prepare the query to insert a new user
-                $register = "INSERT INTO user (nombre, username, email, password) VALUES (?, ?, ?, ?)";
+                $register = "INSERT INTO user (name, username, email, password) VALUES (?, ?, ?, ?)";
                 $stmt_register = $conn->prepare($register);
                 $stmt_register->bind_param("ssss", $name, $username, $email, $password);
 

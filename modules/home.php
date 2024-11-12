@@ -5,6 +5,6 @@
 
     <div class="home-progress">
         <h2>Tu progreso</h2>
-        <p>Has alcanzado el nivel de <?php echo $level['nombre']; ?> con <?php echo $xp; ?> XP. ¡Sigue practicando para avanzar!</p>
+        <p>Has alcanzado el nivel de <?php echo $user_data['nombre']; ?> con <?php echo $xp; ?> XP. ¡Sigue practicando para avanzar!</p>
     </div>
 </div>

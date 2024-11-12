@@ -11,7 +11,7 @@ $result = $stmt->get_result();
             <?php while ($row = $result->fetch_assoc()): ?>
                 <div class="machine">
                     <h3><?php echo $row['nombre_lab']; ?></h3>
-                    <p><?php echo $row['dificultad']; ?></p>
+                    <p>Dificultad:<?php echo $row['dificultad']; ?></p>
                     <a href="./product/product.php?id=<?php echo $row['labs_id']; ?>">Ver detalles</a>
                 </div>
             <?php endwhile; ?>

@@ -26,9 +26,10 @@ $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $user_data = $stmt->get_result()->fetch_assoc();
 
-$_SESSION['xp_total'] = $user_data['xp_total'];
-$_SESSION['level'] = $user_data['nombre'];
-$_SESSION['level_id'] = $user_data['level_id'];
-
-$level = $_SESSION['level'];
+if ($_SESSION['rol_id'] == 1){
+    $_SESSION['xp_total'] = $user_data['xp_total'];
+    $_SESSION['level'] = $user_data['nombre'];
+    $_SESSION['level_id'] = $user_data['level_id'];
+    $level = $_SESSION['level'];
+}
 ?>
